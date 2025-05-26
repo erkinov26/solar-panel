@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.home {
+  background-image: url('../public/solar-black.png');
+}

@@ -156,7 +156,7 @@ export function Home() {
           </nav>
 
           <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center max-w-[90vw] mx-auto">
-            <h1 className="flex flex-wrap justify-center font-bold sm:w-auto w-[85%] tracking-wide leading-tight text-white select-none sm:text-[4vw] text-[6vw] font-bold tracking-wide leading-[4.5vw]">
+            <h1 className="flex flex-wrap justify-center font-bold sm:w-auto w-[85%] tracking-wide leading-tight text-white select-none sm:text-[4vw] text-[6vw] ">
               <span>RENEWABLE ENERGY</span>
               <span
                 className={`ml-2 flex ${rotatingWords[currentWordIndex].color} whitespace-nowrap`}
@@ -219,7 +219,7 @@ export function Home() {
           className="bg-gray-900 py-20 min-h-[100vh] px-6 flex flex-col justify-center items-center"
         >
           <div className="max-w-7xl text-center mb-12">
-            <h2 className=" font-bold sm:w-auto w-full tracking-wide leading-tight text-white select-none sm:text-[4vw] text-[6vw] font-bold tracking-wide leading-[4.5vw]">
+            <h2 className=" font-bold sm:w-auto w-full tracking-wide leading-tight text-white select-none sm:text-[4vw] text-[6vw]">
               About Our Solar Solutions
             </h2>
             <p className="sm:text-[2vw] text-[4vw] text-gray-400 mt-4">
@@ -229,25 +229,29 @@ export function Home() {
 
           <div className="flex flex-col sm:flex-row gap-8 max-w-7xl w-full justify-center items-stretch">
             {about.map(({ color, title, svgPath, text }, idx) => (
-              <CardSpotlight
-                key={idx}
-                className="shadow-lg rounded-xl p-6 text-center flex-1 flex flex-col bg-gray-800"
-              >
-                <Card className="bg-transparent flex flex-col h-full">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`w-16 h-16 mx-auto mb-4 ${color}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d={svgPath} />
-                  </svg>
-                  <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-                  <p className="text-gray-300 text-sm">{text}</p>
-                </Card>
-              </CardSpotlight>
+              // <Button key={idx}
+              //   className="shadow-lg rounded-xl p-6 text-center flex-1 flex w-full flex-col bg-gray-800"
+              // >
+                <CardSpotlight
+                  key={idx}
+                  className="shadow-lg rounded-xl p-6 text-center flex-1 flex w-full flex-col bg-gray-800"
+                >
+                  <Card className="bg-transparent flex flex-col h-full">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`w-16 h-16 mx-auto mb-4 ${color}`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d={svgPath} />
+                    </svg>
+                    <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+                    <p className="text-gray-300 text-sm">{text}</p>
+                  </Card>
+                </CardSpotlight>
+              // </Button>
             ))}
           </div>
         </section>

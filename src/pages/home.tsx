@@ -219,7 +219,7 @@ export function Home() {
           className="bg-gray-900 py-20 min-h-[100vh] px-6 flex flex-col justify-center items-center"
         >
           <div className="max-w-7xl text-center mb-12">
-            <h2 className=" font-bold sm:w-auto w-[85%] tracking-wide leading-tight text-white select-none sm:text-[4vw] text-[6vw] font-bold tracking-wide leading-[4.5vw]">
+            <h2 className=" font-bold sm:w-auto w-full tracking-wide leading-tight text-white select-none sm:text-[4vw] text-[6vw] font-bold tracking-wide leading-[4.5vw]">
               About Our Solar Solutions
             </h2>
             <p className="sm:text-[2vw] text-[4vw] text-gray-400 mt-4">

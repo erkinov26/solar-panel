@@ -93,17 +93,21 @@ export function Home() {
           ))}
 
           <nav
-            className={`fixed top-0 left-0 w-full z-60 transition-all duration-300 ${scrolled ? "bg-black/70 shadow-lg backdrop-blur-md" : "bg-transparent"
-              }`}
+            className={`fixed top-0 left-0 w-full z-90 transition-all duration-300 
+                        ${scrolled ? "bg-black/70 shadow-lg backdrop-blur-md" : "bg-transparent"}
+
+              `
+
+            }
           >
-            <div className="max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between h-16">
+            <div className={`max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between h-16 ${mobileMenuOpen ? 'bg-black/70  backdrop-blur-md ' : 'bg-transparent'}`}>
               <a
                 href="#"
                 className="text-white font-extrabold text-xl md:text-2xl tracking-widest select-none"
               >
                 SOLAR+
               </a>
-              <ul className="hidden md:flex space-x-10 z-80 text-white font-semibold text-base md:text-lg">
+              <ul className="hidden md:flex space-x-10 z-90 text-white font-semibold text-base md:text-lg">
                 {navItems.map((item) => (
                   <li key={item.name} className="relative group cursor-pointer select-none">
                     <a
@@ -121,18 +125,9 @@ export function Home() {
                 className="md:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1.5 focus:outline-none"
                 aria-label="Toggle menu"
               >
-                <span
-                  className={`block w-7 h-0.5 bg-white rounded transform transition duration-300 ease-in-out ${mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                    }`}
-                />
-                <span
-                  className={`block w-7 h-0.5 bg-white rounded transition duration-300 ease-in-out ${mobileMenuOpen ? "opacity-0" : ""
-                    }`}
-                />
-                <span
-                  className={`block w-7 h-0.5 bg-white rounded transform transition duration-300 ease-in-out ${mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                    }`}
-                />
+                {
+                  mobileMenuOpen ? <span className="text-white">Close Menu</span> : <span className="text-white">Open Menu</span>
+                }
               </button>
             </div>
             <AnimatePresence>
@@ -142,7 +137,7 @@ export function Home() {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="flex flex-col px-6 pb-6 space-y-4 bg-black bg-opacity-90 md:hidden"
+                  className={`flex flex-col px-6 pb-6 space-y-4 ${mobileMenuOpen ? 'bg-black/70 shadow-lg backdrop-blur-md ' : 'bg-transparent'} bg-opacity-90 md:hidden`}
                 >
                   {navItems.map((item) => (
                     <li key={item.name}>
@@ -220,9 +215,6 @@ export function Home() {
           <Boxes className="hidden sm:flex" />
 
         </div>
-        {/* <section className="">
-
-        </section> */}
 
         <section
           id="about"

@@ -73,7 +73,7 @@ export function Home() {
     <>
       <div className="overflow-x-hidden">
         <div className="  h-screen w-screen relative  overflow-hidden bg-slate-900 flex flex-col items-center justify-center">
-          <div className="absolute inset-0 w-full h-full bg-slate-900 z-50 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+          <div className="absolute inset-0 w-full h-full hidden sm:block bg-slate-900 z-50 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
 
           {backgrounds.map((bg, i) => (
@@ -217,7 +217,7 @@ export function Home() {
             </a>
           </div>
           {/* </div> */}
-          <Boxes className="" />
+          <Boxes className="hidden sm:flex" />
 
         </div>
         {/* <section className="">

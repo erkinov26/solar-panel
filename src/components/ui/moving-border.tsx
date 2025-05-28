@@ -11,7 +11,7 @@ import { useRef } from "react";
 import { cn } from "../..//lib/utils";
 
 export function Button({
-  borderRadius = "1.75rem",
+  // borderRadius = "1.75rem",
   children,
   as: Component = "button",
   containerClassName,
@@ -32,17 +32,17 @@ export function Button({
   return (
     <Component
       className={cn(
-        "relative h-16 w-40 overflow-hidden bg-transparent p-[1px] text-xl",
+        "relative overflow-hidden bg-transparent p-[1px] text-xl",
         containerClassName,
       )}
       style={{
-        borderRadius: borderRadius,
+        // borderRadius: borderRadius,
       }}
       {...otherProps}
     >
       <div
         className="absolute inset-0"
-        style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
+        // style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}
       >
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
@@ -60,7 +60,7 @@ export function Button({
           className,
         )}
         style={{
-          borderRadius: `calc(${borderRadius} * 0.96)`,
+          // borderRadius: `calc(${borderRadius} * 0.96)`,
         }}
       >
         {children}

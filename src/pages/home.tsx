@@ -6,7 +6,7 @@ import { CardSpotlight } from "../components/ui/card-spotlight";
 import { Boxes } from "../components/ui/background-boxes";
 import { Cover } from "../components/ui/cover";
 // import { Button } from "../components/ui/moving-border";
-import { FloatingDock } from "../components/ui/floating-dock";
+// import { FloatingDock } from "../components/ui/floating-dock";
 import { Button } from "../components/ui/moving-border";
 // import { IconHomeBitcoin } from "@tabler/icons-react";
 

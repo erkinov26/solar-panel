@@ -7,6 +7,7 @@ const TelegramForm = () => {
 
   const BOT_TOKEN = import.meta.env.VITE_BOT_TOKEN;
   const CHAT_ID = import.meta.env.VITE_CHAT_ID;
+  const proxyUrl = import.meta.env.VITE_PROXY_URL;
   const validate = () => {
     let valid = true;
     const newErrors = { name: '', number: '' };
@@ -40,9 +41,11 @@ const TelegramForm = () => {
     const messageText = `📥 Yangi so'rov:\n👤 Ism: ${formData.name}\n📞 Telefon: ${fullNumber}`;
 
     try {
-      const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+      const response = await fetch(proxyUrl + BOT_TOKEN, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
           chat_id: CHAT_ID,
           text: messageText,

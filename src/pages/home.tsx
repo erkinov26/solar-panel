@@ -8,6 +8,7 @@ import { Cover } from "../components/ui/cover";
 // import { Button } from "../components/ui/moving-border";
 // import { FloatingDock } from "../components/ui/floating-dock";
 import { Button } from "../components/ui/moving-border";
+import TelegramForm from "../components/custom/telegram-form";
 // import { IconHomeBitcoin } from "@tabler/icons-react";
 
 const backgrounds = ["/solar-black.png", "/solar-green.svg"];
@@ -99,18 +100,18 @@ export function Home() {
 
           <nav
             className={`fixed top-0 left-0 w-full z-90 transition-all duration-300 
-                        ${scrolled ? "bg-black/70 shadow-lg backdrop-blur-md" : "bg-transparent"}
+                        ${scrolled ? "bg-slate-800/70 shadow-lg backdrop-blur-md" : "bg-transparent"}
 
               `
 
             }
           >
-            <div className={`max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between h-16 ${mobileMenuOpen ? 'bg-black/70  backdrop-blur-md ' : 'bg-transparent'}`}>
+            <div className={`max-w-7xl mx-auto px-6 sm:px-12 flex items-center justify-between h-16 ${mobileMenuOpen ? 'bg-slate-800/70  backdrop-blur-md ' : 'bg-transparent'}`}>
               <a
                 href="#"
                 className="text-white font-extrabold text-xl md:text-2xl tracking-widest select-none"
               >
-                SOLAR+
+                FLEXENERGY
               </a>
               <ul className="hidden md:flex space-x-10 z-90 text-white font-semibold text-base md:text-lg">
                 {navItems.map((item) => (
@@ -346,6 +347,23 @@ export function Home() {
               </CardSpotlight>
             </Button>
           </div>
+        </section >
+        <section
+          id="contact"
+          className="bg-slate-900 py-20 px-6 flex flex-col justify-center items-center min-h-[100vh]"
+        >
+          <div className="max-w-7xl text-center mb-12">
+            <h2 className="font-bold sm:text-[4vw] text-[6vw] text-white tracking-wide leading-tight">
+              Our Services
+            </h2>
+            <p className="sm:text-[2vw] text-[4vw] text-gray-400 mt-4">
+              Providing comprehensive solutions tailored to your energy needs.
+            </p>
+          </div>
+
+
+          <TelegramForm />
+
         </section >
 
       </div >

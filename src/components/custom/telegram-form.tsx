@@ -7,7 +7,6 @@ const TelegramForm = () => {
 
   const BOT_TOKEN = import.meta.env.VITE_BOT_TOKEN;
   const CHAT_ID = import.meta.env.VITE_CHAT_ID;
-  const SHEET_URL = import.meta.env.VITE_SHEET_URL;
   const validate = () => {
     let valid = true;
     const newErrors = { name: '', number: '' };
@@ -41,18 +40,6 @@ const TelegramForm = () => {
     const messageText = `📥 Yangi so'rov:\n👤 Ism: ${formData.name}\n📞 Telefon: ${fullNumber}`;
 
     try {
-      // 1. Google Sheetsga yuborish
-      await fetch(SHEET_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: formData.name,
-          phone: fullNumber,
-        }),
-      });
-
-
-      // 2. Telegram botga yuborish
       const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -78,7 +65,7 @@ const TelegramForm = () => {
 
   return (
     <Button containerClassName='rounded-md' borderClassName='rounded-md' duration={4000} className='rounded-md'>
-      <form onSubmit={handleSubmit} className='sm:w-[40vw] p-4 rounded-md bg-slate-800 shadow-md flex flex-col gap-4 justify-center items-center mx-auto'>
+      <form onSubmit={handleSubmit} className='sm:w-[40vw] w-[90vw] p-4 rounded-md bg-slate-800 shadow-md flex flex-col gap-4 justify-center items-center mx-auto'>
 
         <input
           className='p-4 w-full outline-none h-full bg-slate-900 rounded-md text-white'

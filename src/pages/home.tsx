@@ -14,11 +14,10 @@ import TelegramForm from "../components/custom/telegram-form";
 const backgrounds = ["/solar-black.png", "/solar-green.svg"];
 
 const rotatingWords = [
-  { text: "RENEWABLE", color: "text-green-400" },
-  { text: "ENERGY", color: "text-yellow-400" },
-  { text: "SOLUTIONS", color: "text-blue-400" },
+  { text: "TEJAMKORLIK", color: "text-yellow-400" },
+  { text: "ISHONCH", color: "text-green-400" },
+  { text: "KELAJAK", color: "text-blue-400" },
 ];
-
 const letterVariants = {
   initial: { opacity: 0, x: -10 },
   animate: { opacity: 1, x: 0 },
@@ -118,11 +117,11 @@ export function Home() {
                   <li key={item.name} className="relative group cursor-pointer select-none">
                     <a
                       href={item.href}
-                      className="hover:text-green-400 transition-colors duration-300"
+                      className="hover:text-blue-400 transition-colors duration-300"
                     >
                       {item.name}
                     </a>
-                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-green-400 transition-all group-hover:w-full"></span>
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-400 transition-all group-hover:w-full"></span>
                   </li>
                 ))}
               </ul>
@@ -166,8 +165,8 @@ export function Home() {
           </nav>
 
           {/* <div className="relative  border-4 border-red-900 z-10 flex flex-col items-center justify-center px-6 text-center max-w-[90vw] mx-auto"> */}
-          <h1 className="flex z-60 relative flex-wrap justify-center font-bold sm:w-auto w-[85%] tracking-wide leading-tight text-white select-none sm:text-[4vw] text-[6vw] ">
-            <span>RENEWABLE ENERGY</span>
+          <h1 className="flex z-60 relative flex-wrap justify-center font-bold sm:w-auto w-[85%] tracking-wide leading-tight text-white select-none sm:text-[3.5vw] text-[6vw] ">
+            <span>QUYOSH ENERGIYASI BU —</span>
             <span
               className={`ml-2 flex ${rotatingWords[currentWordIndex].color} whitespace-nowrap`}
             >
@@ -232,10 +231,11 @@ export function Home() {
         >
           <div className="max-w-7xl text-center mb-12">
             <h2 className=" font-bold sm:w-auto w-full tracking-wide leading-tight text-white select-none sm:text-[4vw] text-[6vw]">
-              About Our  <Cover className="cursor-pointer">Solar Solutions</Cover>
+              <Cover className="cursor-pointer">Quyosh yechimlarimiz haqida</Cover>
+
             </h2>
             <p className="sm:text-[2vw] text-[4vw] text-gray-400 mt-4">
-              Discover how our solar technology is changing the future.
+              Bizning quyosh texnologiyamiz kelajakni qanday o'zgartirayotganini kashf eting.
             </p>
           </div>
 
@@ -273,10 +273,10 @@ export function Home() {
         >
           <div className="max-w-7xl text-center mb-12">
             <h2 className="font-bold sm:text-[4vw] text-[6vw] text-white tracking-wide leading-tight">
-              Our Services
+              Bizning xizmatlarimiz
             </h2>
             <p className="sm:text-[2vw] text-[4vw] text-gray-400 mt-4">
-              Providing comprehensive solutions tailored to your energy needs.
+              Energiya ehtiyojlaringizga moslashtirilgan keng qamrovli yechimlarni taqdim etish.
             </p>
           </div>
 
@@ -295,9 +295,9 @@ export function Home() {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m16.36 6.36l-.71.71M6.34 6.34l-.71-.71M18.36 5.64l-.71-.71M6.34 17.66l-.71.71M12 7a5 5 0 100 10 5 5 0 000-10z" />
                   </svg>
-                  <h3 className="text-white font-semibold text-xl mb-2">Solar Panel Installation</h3>
+                  <h3 className="text-white font-semibold text-xl mb-2">Quyosh panellarini o'rnatish</h3>
                   <p className="text-gray-300">
-                    Expert installation of high-efficiency solar panels for homes and businesses to ensure maximum energy savings.
+                    Yuqori samaradorlikka ega quyosh panellarini o'rnatish bo'yicha mutaxassislik, energiya tejashni ta'minlash uchun.
                   </p>
                 </Card>
               </CardSpotlight>
@@ -318,9 +318,9 @@ export function Home() {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h4l3-3 4 4 5-5 4 4v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6z" />
                   </svg>
-                  <h3 className="text-white font-semibold text-xl mb-2">System Monitoring</h3>
+                  <h3 className="text-white font-semibold text-xl mb-2">Tizim Monitoring</h3>
                   <p className="text-gray-300">
-                    Real-time monitoring and performance analytics to ensure your solar system operates at peak efficiency.
+                    Quyosh sistemangiz eng yuqori samaradorlikda ishlashini ta'minlash uchun real vaqtda monitoring va ishlash tahlili.
                   </p>
                 </Card>
               </CardSpotlight>
@@ -339,9 +339,9 @@ export function Home() {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.1 0-2 .9-2 2 0 .35.1.68.26.97L6 17h12l-4.26-6.03c.16-.29.26-.62.26-.97 0-1.1-.9-2-2-2z" />
                   </svg>
-                  <h3 className="text-white font-semibold text-xl mb-2">Maintenance & Support</h3>
+                  <h3 className="text-white font-semibold text-xl mb-2">Xizmat va qo‘llab-quvvatlash</h3>
                   <p className="text-gray-300">
-                    Regular maintenance and dedicated customer support to keep your system running smoothly year-round.
+                    Doimiy texnik xizmat ko'rsatish va mijozlarni qo'llab-quvvatlash bilan sizning tizimingizni yil davomida samarali ishlashini ta'minlaymiz.
                   </p>
                 </Card>
               </CardSpotlight>
@@ -354,10 +354,10 @@ export function Home() {
         >
           <div className="max-w-7xl text-center mb-12">
             <h2 className="font-bold sm:text-[4vw] text-[6vw] text-white tracking-wide leading-tight">
-              Our Services
+              Biz bilan bog'laning
             </h2>
             <p className="sm:text-[2vw] text-[4vw] text-gray-400 mt-4">
-              Providing comprehensive solutions tailored to your energy needs.
+              Sizning energiya ehtiyojlaringizga moslashtirilgan keng qamrovli echimlarni taqdim etamiz.
             </p>
           </div>
 

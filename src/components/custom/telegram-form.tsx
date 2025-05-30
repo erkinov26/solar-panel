@@ -6,8 +6,11 @@ const TelegramForm = () => {
   const [errors, setErrors] = useState({ name: '', number: '' });
 
   const BOT_TOKEN = import.meta.env.VITE_BOT_TOKEN;
+  console.log("🚀 ~ TelegramForm ~ BOT_TOKEN:", BOT_TOKEN)
   const CHAT_ID = import.meta.env.VITE_CHAT_ID;
+  console.log("🚀 ~ TelegramForm ~ CHAT_ID:", CHAT_ID)
   const proxyUrl = import.meta.env.VITE_PROXY_URL;
+  console.log("🚀 ~ TelegramForm ~ proxyUrl:", proxyUrl)
   const validate = () => {
     let valid = true;
     const newErrors = { name: '', number: '' };
@@ -40,8 +43,10 @@ const TelegramForm = () => {
     const fullNumber = `+998${formData.number}`;
     const messageText = `📥 Yangi so'rov:\n👤 Ism: ${formData.name}\n📞 Telefon: ${fullNumber}`;
 
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
     try {
-      const response = await fetch(proxyUrl + BOT_TOKEN, {
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,6 +70,7 @@ const TelegramForm = () => {
       alert('Xabar yuborilmadi!');
     }
   };
+
 
   return (
     <Button containerClassName='rounded-md' borderClassName='rounded-md' duration={4000} className='rounded-md'>

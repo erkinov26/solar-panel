@@ -146,7 +146,7 @@ export function Home() {
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className={`flex flex-col px-6 pb-6 space-y-4 ${mobileMenuOpen ? 'bg-black/70 shadow-lg backdrop-blur-md ' : 'bg-transparent'} bg-opacity-90 md:hidden`}
+                  className={`flex flex-col px-6 pb-6 space-y-4 ${mobileMenuOpen ? 'bg-slate-800/70 shadow-lg backdrop-blur-md ' : 'bg-transparent'} bg-opacity-90 md:hidden`}
                 >
                   {navItems.map((item) => (
                     <li key={item.name}>

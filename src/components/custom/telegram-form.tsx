@@ -39,20 +39,22 @@ const TelegramForm = () => {
     e.preventDefault();
     if (!validate()) return;
 
-    const today = new Date().toISOString().split("T")[0]; // 'YYYY-MM-DD'
+    const text = `
+Yangi xabar 📩
+
+👤 Ism: ${formData.name}
+📱 Telefon: +998${formData.phone}
+✉️ Xabar: ${formData.message}
+  `;
 
     try {
-      const response = await fetch("https://api.flexenergy.uz/users", {
+      const response = await fetch("https://api.flexenergy.uz/send-message", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          date: today,
-        }),
+        body: JSON.stringify({ text }),
       });
-
       if (response.ok) {
         alert('Xabar muvaffaqiyatli yuborildi!');
         setFormData({ name: '', phone: '', message: '' });
@@ -65,6 +67,7 @@ const TelegramForm = () => {
       alert('Xabar yuborilmadi!');
     }
   };
+
 
   return (
     <Button containerClassName='rounded-md' borderClassName='rounded-md' duration={4000} className='rounded-md'>

@@ -196,28 +196,28 @@ export function Home() {
             </span>
           </h1>
 
-          <p className="relative z-60 sm:text-[2vw] text-[4vw] text-gray-200 mt-4">
+          <p className="relative z-60 sm:text-[2vw] text-center text-[4vw] text-gray-200 mt-4">
             Empowering Tomorrow With Solar
           </p>
 
-          <p className="relative z-60 sm:text-[1.2vw] text-[3vw] text-gray-300 sm:leading-[1.8vw] leading-[4vw] max-w-[90vw] mx-auto mt-2">
+          <p className="relative text-center z-60 sm:text-[1.2vw] text-[3vw] text-gray-300 sm:leading-[1.8vw] leading-[4vw] max-w-[90vw] mx-auto mt-2">
             Embrace the power of the sun with our cutting-edge solar solutions. Designed for
             efficiency and sustainability, our systems promise a greener tomorrow. Power your home
             or business with renewable energy, reducing costs and supporting a healthier planet.
           </p>
 
           <div className="relative z-60 flex flex-col sm:flex-row gap-4 justify-center pt-6 px-4">
-            <a
-              href="#"
+            {/* <a
+              href="#services"
               className="w-full sm:w-auto px-6 py-3 border border-white rounded-full text-white text-base sm:text-[1.1vw] text-center hover:bg-white hover:text-black transition duration-300"
             >
-              Our Solar Solutions
-            </a>
+              
+            </a> */}
             <a
-              href="#"
+              href="#contact"
               className="w-full sm:w-auto px-6 py-3 bg-blue-600 rounded-full text-white text-base sm:text-[1.1vw] text-center hover:bg-blue-500 transition duration-300"
             >
-              Speak To A Pro!
+              Biz bilan bog'laning
             </a>
           </div>
           {/* </div> */}
